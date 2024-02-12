@@ -15,3 +15,6 @@
 //npm create vite@latest
 //before running a vite project we must first install the node-module folder using npm i or npm install
 //to run - npm run dev
+
+
+// 01_basicreact and 01_vite-react are just two folders initialised by two different methodsto see the working and the control flow of react library and their differences

@@ -1,22 +1,22 @@
-//components
+---- Components<br>
 
-In App.jsx there is a function as function App(){} which is given to the main.jsx file to render it
+1. In App.jsx there is a function as function App(){} which is given to the main.jsx file to render it<br>
 
-created a new file in src folder (in this folder created a file HelloWorld.jsx)
+2. created a new file in src folder (in this folder created a file HelloWorld.jsx)<br>
 
-create a function (created function Hello())
+3. create a function (created function Hello())<br>
 
-return()
+4. return()<br>
 
-add html tags inside it (added basic html to print on the webpage)
+5. add html tags inside it (added basic html to print on the webpage)<br>
 
-export the function
+6. export the function<br>
 
-now send the function to app.jsx by importing it and returning it
-(rendered the component in App.jsx)
+7. now send the function to app.jsx by importing it and returning it
+   (rendered the component in App.jsx)<br>
 
-when vite is used to create a project it is default or must best practice to end file with a .jsx extension and function names should start with a capital letter
+---- when vite is used to create a project it is default or must best practice to end file with a .jsx extension and function names should start with a capital letter
 
-this export is called component but it is not doing any complex activity
+---- this export is called component but it is not doing any complex activity
 
-for both project initialisations it is a convention to capitalise the first letter of any file or any function
+---- for both project initialisations it is a convention to capitalise the first letter of any file or any function

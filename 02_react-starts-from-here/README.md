@@ -20,3 +20,7 @@
 ---- this export is called component but it is not doing any complex activity
 
 ---- for both project initialisations it is a convention to capitalise the first letter of any file or any function
+
+
+---- variables are written before the return keyword and inside the function component and to display it inside the html ,syntax is-suppose a variable is const username="something"
+then to display it we use {username}

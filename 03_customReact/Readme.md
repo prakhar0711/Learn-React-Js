@@ -1,4 +1,4 @@
-//we will create our own custom react
+we will create our own custom react
 
 create a html
 div.id=root

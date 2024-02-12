@@ -5,5 +5,6 @@ import App from './App.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
+    {/* component app is given here to render */}
   </React.StrictMode>,
 )

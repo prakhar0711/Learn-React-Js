@@ -1,8 +1,22 @@
-# React + Vite
+//components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In App.jsx there is a function as function App(){} which is given to the main.jsx file to render it
 
-Currently, two official plugins are available:
+created a new file in src folder (in this folder created a file HelloWorld.jsx)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+create a function (created function Hello())
+
+return()
+
+add html tags inside it (added basic html to print on the webpage)
+
+export the function
+
+now send the function to app.jsx by importing it and returning it
+(rendered the component in App.jsx)
+
+when vite is used to create a project it is default or must best practice to end file with a .jsx extension and function names should start with a capital letter
+
+this new export is called component but it is not doing any complex activity
+
+for both project initialisations it is a convention to capitalise the first letter of any file or any function

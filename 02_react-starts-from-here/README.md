@@ -24,3 +24,5 @@
 
 ---- variables are written before the return keyword and inside the function component and to display it inside the html ,syntax is-suppose a variable is const username="something"
 then to display it we use {username}
+
+---- {username} : this is called evaluated expression. Only the final outcome can be passed here and not any kind of processing or conditional.All that should happen outside the rendering

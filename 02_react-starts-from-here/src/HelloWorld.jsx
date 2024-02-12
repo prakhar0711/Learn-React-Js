@@ -2,8 +2,7 @@
 function Hello() {
     return (
       <>
-        <h1>Welcome to the first react app</h1>
-        <h2>It is the first project</h2>
+        <h3>Welcome to the Hello app</h3>
       </>
     );
 }

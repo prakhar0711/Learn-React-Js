@@ -50,7 +50,7 @@ function App() {
     passRef.current?.setSelectionRange(0, length);
     // Copy the password to clipboard
     window.navigator.clipboard.writeText(password);
-  }, [password]);
+  }, [password,length]);
 
   // Run generatePassword function whenever length, numAllowed, or charAllowed changes
   useEffect(() => {

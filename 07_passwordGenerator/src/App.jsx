@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState, useRef } from "react";
  */
 function App() {
   // State variables for password, length, and allowed characters
+  
   const [password, setPassword] = useState(""); // State for the generated password
   const [length, setLength] = useState(6); // State for password length
   const [numAllowed, setNumAllowed] = useState(false); // State for allowing numbers in password

@@ -1,5 +1,5 @@
-now onto our first project <br>
-we will be creating a simple counter app<br>
+<h2>Now onto our first project. <br>
+We will be creating a simple counter app</h2><br>
 
 1. create a counter value heading tag<br>
 

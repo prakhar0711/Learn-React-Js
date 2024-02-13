@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import "./App.css";
+import Card from "./components/Card";
 function App() {
-  const [count, setCount] = useState(0)
-
+  //to pass object to a component we have to create a object outside the return see below
+  //const myObj={name:'tushar',email:'hello@.com'}
+  //to pass it as props inside the component the syntax is- <Card newObj={myObj}>
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1 className="bg-green-600 text-black p-10 rounded-3xl mb-4 text">
+        Tailwind
+      </h1>
+      {/* we can use the Card multiple times */}
+      {/* but both card have same content */}
+      <Card username="tushar" text="hi,welcome to my world" />
+      <Card username="prakhar" />
+      {/* after giving username and implementing use of props we can change the content of the card.This helps in cases when we are fetching and managing data via a database */}
     </>
-  )
+  );
 }
+// bg-green is to set bacground color
+//text-black is to set text color to black
+// p-10 is to set padding
+//rounded-3xl is to set border radius
 
-export default App
+export default App;

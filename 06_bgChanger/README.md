@@ -1,8 +1,8 @@
-# React + Vite
+#Background Changer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.Create useState for color<br>
+2.pass the color variable to the body div<br>
+3.Create the bottom bar to show different colors<br>
+4.Create buttons of different colors<br>
+4.Create a function that changes the background color of the body<br>
+5. onClick expects a function that changes the background color we can directly implement color change in onClick but it is not recommended to do so.We must pass a function as an argument to the onClick event handler. We can use the function parameter to change the background color of the body.

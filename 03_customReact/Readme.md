@@ -1,4 +1,4 @@
----- we will create our own custom react
+<h2>We will create our own custom react</h2>
 
 1. create a html<br>
 2. div.id=root<br>
@@ -11,9 +11,9 @@
 9. proprs further contain href and target. target:'\_blank'<br>
 10. the element furthur has a children<br>
 
----- reactElement is given by react as default but we are defining our own react so we have defined a reactElement to see what is going in behind and how react renders html tags
+<p>reactElement is given by react as default but we are defining our own react so we have defined a reactElement to see what is going in behind and how react renders html tags</p><br>
 
----- now we need a method to render the reactElement we have created
+<p>Now we need a method to render the reactElement we have created</p><br>
 
 1. customRender(what to inject,where to inject)<br>
 2. in our case customRender(reactElement,mainContainer)<br>
@@ -24,4 +24,3 @@
 7. We will inject an innerHTML into domElement = reactElement.children<br>
 8. we will then set a domElement set attribute of href and another of targer<br>
 9. container.appendChild(domElement)
-

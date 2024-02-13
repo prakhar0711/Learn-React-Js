@@ -41,7 +41,7 @@ function App() {
   // Function to generate new password
   const generateNewPassword = useCallback(() => {
     generatePassword();
-  }, [length, charAllowed, numAllowed, setPassword]);
+  }, [generatePassword]);
 
   // Function to copy generated password to clipboard
   const copyToClipboard = useCallback(() => {

@@ -1,4 +1,4 @@
-In this section we will see how we integrate and use Tailwind in React<br>
+<h2>In this section we will see how we integrate and use Tailwind in React</h2><br>
 
 You can see installation guides for different frameworks [here](https://tailwindcss.com/docs/installation/framework-guides)<br>
 

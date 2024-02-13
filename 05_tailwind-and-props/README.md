@@ -32,7 +32,7 @@ Add the @tailwind directives for each of Tailwind’s layers to your ./src/index
 @tailwind utilities;
 ```
 
-5. Now to verify if tailwind is installed properly or not.Write some code in the App.jsx file that renders some html tags such as '<h1>' and give it a className of tailwind for eg- '<h1 className="bg-green-300">'<br>
+5. Now to verify if tailwind is installed properly or not.Write some code in the App.jsx file that renders some html tags such as `h1` and give it a className of tailwind for eg- `<h1 className="bg-green-300"></h1>`<br>
 
 Understanding props start here<br>
 1.Go to [devui.io](https://www.devui.io/components) and copy any card component from there to your App.jsx

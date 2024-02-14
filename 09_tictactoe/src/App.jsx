@@ -1,16 +1,57 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 function App() {
   let [state, setState] = useState(Array(9).fill(null));
   let [isXTurn, setisXTurn] = useState(true);
 
-  const handleClick = (index) => {
+  const handleClick = useCallback(
+    (index) => {
+      const copyState = [...state];
+      copyState[index] = isXTurn ? "X" : "O";
+      setState(copyState);
+      setisXTurn(!isXTurn);
+      checkWin();
+    },
+    [state]
+  );
+  const checkWin = useCallback(() => {
     const copyState = [...state];
-    copyState[index] = isXTurn ? "X" : "O";
-    setState(copyState);
-    setisXTurn(!isXTurn);
-  };
+    if (
+      copyState[0] == copyState[1] &&
+      copyState[1] == copyState[2] &&
+      copyState[2] != null
+    ) {
+      alert(`${copyState[2]} wins`);
+    } else if (
+      copyState[3] == copyState[4] &&
+      copyState[4] == copyState[5] &&
+      copyState[5] != null
+    ) {
+      alert(`${copyState[5]} wins`);
+    } else if (
+      copyState[6] == copyState[7] &&
+      copyState[7] == copyState[8] &&
+      copyState[8] != null
+    ) {
+      alert(`${copyState[8]} wins`);
+    } else if (
+      copyState[0] == copyState[4] &&
+      copyState[4] == copyState[8] &&
+      copyState[8] != null
+    ) {
+      alert(`${copyState[8]} wins`);
+    } else if (
+      copyState[2] == copyState[4] &&
+      copyState[4] == copyState[6] &&
+      copyState[6] != null
+    ) {
+      alert(`${copyState[6]} wins`);
+    }
+  }, [state]);
 
+  // useEffect(() => {
+  //   checkWin();
+  // }, [state]);
   return (
     <>
       <div className="rows">

@@ -1,19 +1,9 @@
 import "./App.css";
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback } from "react";
 function App() {
   let [state, setState] = useState(Array(9).fill(null));
   let [isXTurn, setisXTurn] = useState(true);
 
-  const handleClick = useCallback(
-    (index) => {
-      const copyState = [...state];
-      copyState[index] = isXTurn ? "X" : "O";
-      setState(copyState);
-      setisXTurn(!isXTurn);
-      checkWin();
-    },
-    [state]
-  );
   const checkWin = useCallback(() => {
     const copyState = [...state];
     if (
@@ -48,6 +38,16 @@ function App() {
       alert(`${copyState[6]} wins`);
     }
   }, [state]);
+  const handleClick = useCallback(
+    (index) => {
+      const copyState = [...state];
+      copyState[index] = isXTurn ? "X" : "O";
+      setState(copyState);
+      setisXTurn(!isXTurn);
+      checkWin();
+    },
+    [checkWin, isXTurn, state]
+  );
 
   // useEffect(() => {
   //   checkWin();

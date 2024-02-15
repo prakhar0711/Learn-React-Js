@@ -57,7 +57,7 @@ function App() {
         alert(`${copyState[8]} wins`);
       }
     },
-    [state]
+    []
   );
   const handleClick = useCallback(
     (index) => {
@@ -78,9 +78,7 @@ function App() {
   const resetBoard = () => {
     setState(Array(9).fill(null));
   };
-  // useEffect(() => {
-  //   checkWin();
-  // }, [state]);
+
   return (
     <>
       <div>(X goes First)</div>

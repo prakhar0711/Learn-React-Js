@@ -19,3 +19,8 @@ fn can be a normal function or an arrow function
 similarly for charAllowed<br>
 12. Run a loop from 1 to length <br>
 13. refer to App.jsx for furthur instructions
+
+
+
+https://github.com/prakhar0711/Learn-React-Js/assets/110115604/37ae8ad0-b349-4103-9815-336c2d16837a
+

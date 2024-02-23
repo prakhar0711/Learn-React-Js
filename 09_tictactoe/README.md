@@ -1,53 +1,60 @@
-### Steps to Code the Tic-Tac-Toe Game:
+### Steps to Code the Tic-Tac-Toe Game with Vite:
 
-1. **Set Up Your React Environment:**
-   - Ensure you have Node.js and npm installed on your machine.
-   - Create a new React app using Create React App:
+1. **Create a New Vite Project:**
+   - Initialize a new Vite project using npm:
      ```bash
-     npx create-react-app tic-tac-toe
+     npm create vite@latest tic-tac-toe --template react
      ```
-   - Navigate to the project directory:
+
+2. **Navigate to Project Directory:**
+   - Move into the newly created project directory:
      ```bash
      cd tic-tac-toe
      ```
 
-2. **Open `src/App.js` File:**
-   - Open the `src/App.js` file in your code editor.
-
-3. **Import React, useState, and useCallback:**
-   - Import the necessary modules at the top of the file:
-     ```javascript
-     import React, { useState, useCallback } from "react";
-     import "./App.css";
+3. **Install Necessary Dependencies:**
+   - Install React and ReactDOM if they're not already included:
+     ```bash
+     npm install react react-dom
      ```
 
-4. **Define Functional Component:**
+4. **Open `src/App.jsx` File:**
+   - Open the `src/App.jsx` file in your code editor.
+
+5. **Import React, useState, and useCallback:**
+   - Import the necessary modules at the top of the file:
+     ```jsx
+     import React, { useState, useCallback } from "react";
+     import "./App.css"; // If you're using a CSS file for styling
+     ```
+
+6. **Define Functional Component:**
    - Create a functional component named `App`:
-     ```javascript
+     ```jsx
      function App() {
        // Logic will go here
      }
      ```
 
-5. **Initialize State Variables:**
+7. **Initialize State Variables:**
    - Use the `useState` hook to define state variables for the game board and whose turn it is:
-     ```javascript
+     ```jsx
      const [state, setState] = useState(Array(9).fill(null));
      const [isXTurn, setIsXTurn] = useState(true);
      ```
 
-6. **Implement Winning Logic:**
+8. **Implement Winning Logic:**
    - Define a function (`checkWin`) to check for winning combinations after each move:
-     ```javascript
+     ```jsx
      const checkWin = useCallback((copyState) => {
        // Check all winning combinations
        // Update the state accordingly
      }, []);
      ```
 
-7. **Handle Clicks on Game Board:**
+9. **Handle Clicks on Game Board:**
    - Implement a function (`handleClick`) to handle clicks on the game board:
-     ```javascript
+     ```jsx
      const handleClick = useCallback((index) => {
        // Update the game board based on the clicked box
        // Check for a winner
@@ -55,39 +62,39 @@
      }, []);
      ```
 
-8. **Reset the Game Board:**
-   - Create a function (`resetBoard`) to reset the game board when the "Reset" button is clicked:
-     ```javascript
-     const resetBoard = () => {
-       // Reset the game board to initial state
-     };
-     ```
+10. **Reset the Game Board:**
+    - Create a function (`resetBoard`) to reset the game board when the "Reset" button is clicked:
+      ```jsx
+      const resetBoard = () => {
+        // Reset the game board to initial state
+      };
+      ```
 
-9. **Render UI Elements:**
-   - Return JSX elements to render the game board, including boxes, and the "Reset" button:
-     ```javascript
-     return (
-       <>
-         {/* Render game board */}
-         {/* Handle clicks on boxes */}
-         {/* Display "Reset" button */}
-       </>
-     );
-     ```
+11. **Render UI Elements:**
+    - Return JSX elements to render the game board, including boxes, and the "Reset" button:
+      ```jsx
+      return (
+        <>
+          {/* Render game board */}
+          {/* Handle clicks on boxes */}
+          {/* Display "Reset" button */}
+        </>
+      );
+      ```
 
-10. **Export the Component:**
-    ```javascript
+12. **Export the Component:**
+    ```jsx
     export default App;
     ```
 
-11. **Style Your App (Optional):**
+13. **Style Your App (Optional):**
     - Create a CSS file (`App.css`) and add styles to enhance the appearance of your game board.
 
-12. **Run Your App:**
-    - Start the development server:
+14. **Run Your App:**
+    - Start the Vite development server:
       ```bash
       npm run dev
       ```
-    - Open your web browser and navigate to `http://localhost:3000` to view and play your Tic-Tac-Toe game.
+    - Open your web browser and navigate to `http://localhost:5173` to view and play your Tic-Tac-Toe game.
 
-Now you have a fully functional Tic-Tac-Toe game built with React! You can further customize and enhance it based on your preferences and requirements.
+Now you have a fully functional Tic-Tac-Toe game built with React and Vite! You can further customize and enhance it based on your preferences and requirements.

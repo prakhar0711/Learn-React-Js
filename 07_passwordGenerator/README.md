@@ -129,7 +129,7 @@ return (
 
 ### 7. Test and Debug
 
-Run the React development server (`npm start`) to test the app in the browser. Verify password generation, length adjustment, and character options.
+Run the React development server (`npm run dev`) to test the app in the browser. Verify password generation, length adjustment, and character options.
 
 ### 8. Deployment
 

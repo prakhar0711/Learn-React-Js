@@ -1,26 +1,32 @@
-<h2>We will create our own custom react</h2>
+## Creating Our Own Custom React Renderer
 
-1. create a html<br>
-2. div.id=root<br>
-3. script src=./customReact.js<br>
-4. create a customReact.js<br>
-5. grab root in js<br>
-6. create object const reactElement<br>
-7. reactElement have type of html tag<br>
-8. it also has props as an object also called properties<br>
-9. proprs further contain href and target. target:'\_blank'<br>
-10. the element furthur has a children<br>
+In this section, we will create a custom React renderer to understand how React renders HTML elements behind the scenes.
 
-<p>reactElement is given by react as default but we are defining our own react so we have defined a reactElement to see what is going in behind and how react renders html tags</p><br>
+### Setting Up the Environment
 
-<p>Now we need a method to render the reactElement we have created</p><br>
+1. Create an HTML file.
+2. Add a `div` element with an id of `root` to serve as the container for our custom React rendering.
+3. Include a `<script>` tag to import our custom React script (`customReact.js`).
 
-1. customRender(what to inject,where to inject)<br>
-2. in our case customRender(reactElement,mainContainer)<br>
-3. but now we dont know how customRender will work so we will define the customRender method.<br>
-4. create a function customRender(reactElement,mainContainer)<br>
-5. We have to create a DOM element that will create element 'reactElement.type'<br>
-6. but now the container is empty we will have to provide it with something<br>
-7. We will inject an innerHTML into domElement = reactElement.children<br>
-8. we will then set a domElement set attribute of href and another of targer<br>
-9. container.appendChild(domElement)
+### Defining the Custom React Element
+
+4. In `customReact.js`, grab the `root` element from the HTML document.
+5. Define a custom React element (`reactElement`) as an object.
+6. The `reactElement` has a `type` representing the HTML tag.
+7. It also contains `props` as an object, which includes properties like `href` and `target`.
+8. Define the `children` property for the element.
+
+### Implementing the Custom Render Method
+
+9. Define a method `customRender(reactElement, mainContainer)`.
+10. Inside `customRender`, create a new DOM element based on the `type` of the `reactElement`.
+11. Set the `innerHTML` of the new DOM element to the `children` of the `reactElement`.
+12. Set attributes such as `href` and `target` based on the `props` of the `reactElement`.
+13. Use `appendChild` to append the new DOM element to the specified container (`mainContainer`).
+
+### Usage Example
+
+14. Call `customRender(reactElement, mainContainer)` to render the `reactElement` into the `mainContainer`.
+15. The `reactElement` will be injected into the `root` container, displaying the HTML element with specified properties and children.
+
+By following these steps, you'll gain insights into the inner workings of React rendering and create your own custom React renderer.

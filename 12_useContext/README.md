@@ -107,8 +107,8 @@ To run this example on your local machine, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Navigate to the project directory in your terminal.
-3. Install dependencies using `npm install`.
-4. Start the development server using `npm start`.
+3. Install dependencies using `npm install` or `npm i`.
+4. Start the development server using `npm run dev`.
 
 ## How It Works
 

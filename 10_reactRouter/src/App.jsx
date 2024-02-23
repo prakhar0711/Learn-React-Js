@@ -3,6 +3,7 @@ import About from "./components/About";
 import Users from "./components/Users";
 import "./App.css";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <>
@@ -21,9 +22,12 @@ function App() {
         </ul>
         {/* Creates the route paths and renders the required component */}
         <Routes>
-          <Route exact path="/" element={<Home />}/>
-          <Route exact path="/about" element={<About />}/>
-          <Route exact path="/users" element={<Users />}/>
+          {/* Route for Home component */}
+          <Route exact path="/" element={<Home />} />
+          {/* Route for About component */}
+          <Route exact path="/about" element={<About />} />
+          {/* Route for Users component */}
+          <Route exact path="/users" element={<Users />} />
         </Routes>
       </Router>
     </>

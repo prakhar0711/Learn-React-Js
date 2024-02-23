@@ -30,7 +30,7 @@ This is a simple weather app built with React that displays weather information 
 
 5. Run the app:
    ```bash
-   npm start
+   npm run dev
    ```
 
 6. Enter the city name in the search input field and press Enter.

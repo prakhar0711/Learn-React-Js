@@ -1,4 +1,4 @@
-# Learn React.js
+# Learn React.js - Learn By Doing !!  
 
 This repository provides a **structured learning path** through a collection of **React.js projects and notes**, helping you grasp the fundamentals and delve deeper into advanced concepts. Each project progresses in difficulty, starting with basic building blocks and leading to more intricate applications.
 

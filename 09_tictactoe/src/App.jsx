@@ -1,176 +1,136 @@
 import "./App.css";
 import { useState, useCallback } from "react";
+
 function App() {
+  // State to keep track of the game board
   let [state, setState] = useState(Array(9).fill(null));
+  // State to determine whose turn it is (X or O)
   let [isXTurn, setisXTurn] = useState(true);
 
-  const checkWin = useCallback(
-    (copyState) => {
-      // const copyState = [...state];
-      if (
-        copyState[0] == copyState[1] &&
-        copyState[1] == copyState[2] &&
-        copyState[2] != null
-      ) {
-        alert(`${copyState[2]} wins`);
-      } else if (
-        copyState[3] == copyState[4] &&
-        copyState[4] == copyState[5] &&
-        copyState[5] != null
-      ) {
-        alert(`${copyState[5]} wins`);
-      } else if (
-        copyState[6] == copyState[7] &&
-        copyState[7] == copyState[8] &&
-        copyState[8] != null
-      ) {
-        alert(`${copyState[8]} wins`);
-      } else if (
-        copyState[0] == copyState[4] &&
-        copyState[4] == copyState[8] &&
-        copyState[8] != null
-      ) {
-        alert(`${copyState[8]} wins`);
-      } else if (
-        copyState[2] == copyState[4] &&
-        copyState[4] == copyState[6] &&
-        copyState[6] != null
-      ) {
-        alert(`${copyState[6]} wins`);
-      } else if (
-        copyState[0] == copyState[3] &&
-        copyState[3] == copyState[6] &&
-        copyState[6] != null
-      ) {
-        alert(`${copyState[6]} wins`);
-      } else if (
-        copyState[1] == copyState[4] &&
-        copyState[4] == copyState[7] &&
-        copyState[7] != null
-      ) {
-        alert(`${copyState[7]} wins`);
-      } else if (
-        copyState[2] == copyState[5] &&
-        copyState[5] == copyState[8] &&
-        copyState[8] != null
-      ) {
-        alert(`${copyState[8]} wins`);
-      }
-    },
-    []
-  );
+  // Function to check if there's a winner
+  const checkWin = useCallback((copyState) => {
+    // Check all possible winning combinations
+    if (
+      copyState[0] === copyState[1] &&
+      copyState[1] === copyState[2] &&
+      copyState[2] !== null
+    ) {
+      alert(`${copyState[2]} wins`); // Display winner
+    } else if (
+      copyState[3] === copyState[4] &&
+      copyState[4] === copyState[5] &&
+      copyState[5] !== null
+    ) {
+      alert(`${copyState[5]} wins`);
+    } else if (
+      copyState[6] === copyState[7] &&
+      copyState[7] === copyState[8] &&
+      copyState[8] !== null
+    ) {
+      alert(`${copyState[8]} wins`);
+    } else if (
+      copyState[0] === copyState[4] &&
+      copyState[4] === copyState[8] &&
+      copyState[8] !== null
+    ) {
+      alert(`${copyState[8]} wins`);
+    } else if (
+      copyState[2] === copyState[4] &&
+      copyState[4] === copyState[6] &&
+      copyState[6] !== null
+    ) {
+      alert(`${copyState[6]} wins`);
+    } else if (
+      copyState[0] === copyState[3] &&
+      copyState[3] === copyState[6] &&
+      copyState[6] !== null
+    ) {
+      alert(`${copyState[6]} wins`);
+    } else if (
+      copyState[1] === copyState[4] &&
+      copyState[4] === copyState[7] &&
+      copyState[7] !== null
+    ) {
+      alert(`${copyState[7]} wins`);
+    } else if (
+      copyState[2] === copyState[5] &&
+      copyState[5] === copyState[8] &&
+      copyState[8] !== null
+    ) {
+      alert(`${copyState[8]} wins`);
+    }
+  }, []);
+
+  // Function to handle clicking on a box
   const handleClick = useCallback(
     (index) => {
       const copyState = [...state];
-      if (copyState[index] == null) {
-        copyState[index] = isXTurn ? "X" : "O";
+      // Check if the box is empty
+      if (copyState[index] === null) {
+        copyState[index] = isXTurn ? "X" : "O"; // Set X or O based on whose turn it is
       } else {
-        alert("box already filled");
+        alert("Box already filled");
       }
       setState(copyState);
-      setisXTurn(!isXTurn);
+      setisXTurn(!isXTurn); // Switch turns
       setTimeout(() => {
-        checkWin(copyState);    //setTimeout is not a good thing to do here look for other solutions as the alert msg used to get displayed before marking the final X so i used setTimeout on it
+        checkWin(copyState); // Check for a winner after a short delay
       }, 100);
     },
     [checkWin, isXTurn, state]
   );
+
+  // Function to reset the game board
   const resetBoard = () => {
     setState(Array(9).fill(null));
   };
 
+  // JSX for rendering the game board
   return (
     <>
       <div>(X goes First)</div>
       <div className="rows">
-        <div
-          className="boxes"
-          onClick={() => {
-            handleClick(0);
-          }}
-        >
-          {state[0]}
-        </div>
-        <div
-          className="boxes"
-          onClick={() => {
-            handleClick(1);
-          }}
-        >
-          {state[1]}
-        </div>
-        <div
-          className="boxes"
-          onClick={() => {
-            handleClick(2);
-          }}
-        >
-          {state[2]}
-        </div>
+        {[0, 1, 2].map((index) => (
+          <div
+            key={index}
+            className="boxes"
+            onClick={() => {
+              handleClick(index);
+            }}
+          >
+            {state[index]}
+          </div>
+        ))}
       </div>
       <div className="rows">
-        <div
-          className="boxes"
-          onClick={() => {
-            handleClick(3);
-          }}
-        >
-          {state[3]}
-        </div>
-        <div
-          className="boxes"
-          onClick={() => {
-            handleClick(4);
-          }}
-        >
-          {state[4]}
-        </div>
-        <div
-          className="boxes"
-          onClick={() => {
-            handleClick(5);
-          }}
-        >
-          {state[5]}
-        </div>
+        {[3, 4, 5].map((index) => (
+          <div
+            key={index}
+            className="boxes"
+            onClick={() => {
+              handleClick(index);
+            }}
+          >
+            {state[index]}
+          </div>
+        ))}
       </div>
       <div className="rows">
-        <div
-          className="boxes"
-          onClick={() => {
-            handleClick(6);
-          }}
-        >
-          {state[6]}
-        </div>
-        <div
-          className="boxes"
-          onClick={() => {
-            handleClick(7);
-          }}
-        >
-          {state[7]}
-        </div>
-        <div
-          className="boxes"
-          onClick={() => {
-            handleClick(8);
-          }}
-        >
-          {state[8]}
-        </div>
+        {[6, 7, 8].map((index) => (
+          <div
+            key={index}
+            className="boxes"
+            onClick={() => {
+              handleClick(index);
+            }}
+          >
+            {state[index]}
+          </div>
+        ))}
       </div>
-      <button
-        onClick={() => {
-          resetBoard();
-        }}
-      >
-        Reset
-      </button>
+      <button onClick={resetBoard}>Reset</button>
     </>
   );
 }
 
 export default App;
-
-// task is to create the function of the winner and display it

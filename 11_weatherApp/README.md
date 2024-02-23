@@ -73,4 +73,4 @@ This is a simple weather app built with React that displays weather information 
 - Weather icons provided by [React Icons](https://react-icons.github.io/react-icons/).
 - Weather data fetched from [OpenWeatherMap API](https://openweathermap.org/).
 
-```
+

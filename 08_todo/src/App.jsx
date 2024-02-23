@@ -10,6 +10,10 @@ function App() {
   };
 
   function addTask() {
+    if (task == '') {
+      alert("please enter a task")
+      return
+    }
     setTaskList((taskList) => {
       const updatedList = [...taskList, task];
       setTask("");

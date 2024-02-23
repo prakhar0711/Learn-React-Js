@@ -1,12 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import Weather from "./components/Weather";
+
 function App() {
+  // State variables to manage user input, latitude, longitude, and weather data
   const [city, setCity] = useState("");
-  let [lat, setLat] = useState("");
-  let [lon, setLon] = useState("");
-  let [weatherData, setweatherData] = useState(null);
-  // handle change
+  const [lat, setLat] = useState("");
+  const [lon, setLon] = useState("");
+  const [weatherData, setWeatherData] = useState(null);
+
+  // Function to handle input change
   const handleChange = (event) => {
     if (event.target.value.length > 0) {
       setCity(event.target.value);
@@ -15,7 +18,7 @@ function App() {
     }
   };
 
-  // get the latitude and longitude on the basis of the city entered by the user
+  // Function to get latitude and longitude based on the entered city
   const getLocation = useCallback(async () => {
     try {
       if (!city.trim()) {
@@ -32,10 +35,13 @@ function App() {
       console.log(error);
     }
   }, [city]);
+
+  // Fetch location data on component mount and whenever city changes
   useEffect(() => {
     getLocation();
   }, [city, getLocation]);
 
+  // Function to fetch weather data based on latitude and longitude
   const getWeatherData = useCallback(async () => {
     try {
       if (lat !== "" && lon !== "") {
@@ -43,32 +49,35 @@ function App() {
           `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid={YOUR_API_KEY}`
         );
         const data1 = await res.json();
-        setweatherData(data1);
+        setWeatherData(data1);
         console.log(weatherData);
       } else {
-        setweatherData(null);
+        setWeatherData(null);
       }
     } catch (error) {
       console.log(error);
     }
   }, [lat, lon]);
+
+  // Fetch weather data on component mount and whenever latitude or longitude changes
   useEffect(() => {
     getWeatherData();
   }, [lat, lon, getWeatherData]);
+
   return (
     <>
-      
+      {/* Input field to search for a city */}
       <div>
         <input
           className="input input-bordered w-full max-w-xs"
           name="city"
           value={city}
           type="text"
-          placeholder="search"
+          placeholder="Search"
           onChange={handleChange}
         />
-        
       </div>
+      {/* Component to display weather data */}
       <div>
         <Weather weatherdata={weatherData} />
       </div>
@@ -77,3 +86,13 @@ function App() {
 }
 
 export default App;
+
+
+// The App component manages the user input for the city, latitude, longitude, and weather data.
+// It uses useState hook to manage state variables and useEffect hook for handling side effects.
+// The handleChange function updates the city state based on user input in the input field.
+// getLocation function fetches latitude and longitude data based on the entered city using the OpenWeatherMap API.
+// useEffect hook is used to call getLocation function when the component mounts and whenever the city state changes.
+// getWeatherData function fetches weather data based on latitude and longitude using the OpenWeatherMap API.
+// Another useEffect hook is used to call getWeatherData function when the component mounts and whenever the latitude or longitude state changes.
+// The Weather component is used to display the fetched weather data.

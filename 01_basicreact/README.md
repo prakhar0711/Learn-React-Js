@@ -1,9 +1,15 @@
----- created using the basic react initialisation<br>
----- 1st method for a react project<br>
-1) npx-create-react-app to initiazlise a react project(this is a really slow process there are alternatives for it one such is Vite or Parcel)<br>
-2) A directory '01_basicreact' using create-react-app is initialised<br>
-3) Inside it the package.json file is the entry point that contains versions and dependencies<br>
-4) npm run start to start project in localhost<br>
-5) npm run build to build the project<br>
+# Basic React Initialization
 
-----for both project initialisations it is a convention to capitalise the first letter of any file or any function<br>
+This project was created using the basic initialization method for a React project.
+
+## Initial Steps
+
+1. Initiate a React project using `npx-create-react-app`. Note that this process can be slow, but there are alternative tools available such as Vite or Parcel.
+2. Create a directory named `01_basicreact` using `create-react-app`.
+3. Inside the `01_basicreact` directory, you'll find the `package.json` file, which serves as the entry point and contains information about versions and dependencies.
+4. Start the project locally using `npm run start`.
+5. Build the project using `npm run build`.
+
+## File and Function Naming Convention
+
+For both project initializations, it is a convention to capitalize the first letter of any file or function.

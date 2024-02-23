@@ -74,4 +74,3 @@ This is a simple weather app built with React that displays weather information 
 - Weather data fetched from [OpenWeatherMap API](https://openweathermap.org/).
 
 ```
-This README markdown provides detailed instructions on how to use the weather app, steps to code the `App.js` and `Weather.js` components, their logic, dependencies, and credits.

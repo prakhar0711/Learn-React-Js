@@ -110,6 +110,6 @@
       ```bash
       npm run dev
       ```
-    - Open your web browser and navigate to `http://localhost:3000` to view your To-Do List app.
+    - Open your web browser and navigate to `http://localhost:5173` to view your To-Do List app.
 
 Now you have a fully functional To-Do List app built with React and Vite! You can further enhance it by adding features such as task completion, editing tasks, or storing tasks in local storage for persistence.

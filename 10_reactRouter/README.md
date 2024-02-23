@@ -53,7 +53,7 @@
 7. **Run Your App:**
    - Start the development server:
      ```bash
-     npm start
+     npm run dev
      ```
    - Open your web browser and navigate to `http://localhost:3000` to view your React app with navigation.
 

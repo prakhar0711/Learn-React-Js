@@ -1,26 +1,27 @@
-### Steps to Code the React App with Navigation using React Router:
+### Steps to Code the React App with Navigation using React Router with Vite:
 
-1. **Set Up Your React Environment:**
-   - Ensure you have Node.js and npm installed on your machine.
-   - Create a new React app using Create React App:
+1. **Create a New Vite Project:**
+   - Initialize a new Vite project using npm:
      ```bash
-     npx create-react-app my-router-app
+     npm create vite@latest my-router-app --template react
      ```
-   - Navigate to the project directory:
+
+2. **Navigate to Project Directory:**
+   - Move into the newly created project directory:
      ```bash
      cd my-router-app
      ```
 
-2. **Install React Router:**
+3. **Install React Router:**
    - Install React Router to handle navigation within the application:
      ```bash
      npm install react-router-dom
      ```
 
-3. **Create Component Files:**
+4. **Create Component Files:**
    - Create separate component files for `Home`, `About`, and `Users` inside the `src/components` directory.
    - Define the content for each component file. For example:
-     - `Home.js`:
+     - `Home.jsx`:
        ```jsx
        import React from 'react';
 
@@ -30,12 +31,12 @@
 
        export default Home;
        ```
-     - Similarly, create `About.js` and `Users.js` with appropriate content.
+     - Similarly, create `About.jsx` and `Users.jsx` with appropriate content.
 
-4. **Open `src/App.js` File:**
-   - Replace the content of `src/App.js` with the provided code snippet.
+5. **Open `src/App.jsx` File:**
+   - Replace the content of `src/App.jsx` with the provided code snippet.
 
-5. **Import Necessary Modules:**
+6. **Import Necessary Modules:**
    - Import required modules from React Router and the component files:
      ```javascript
      import Home from "./components/Home";
@@ -44,18 +45,18 @@
      import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
      ```
 
-6. **Define Routes and Navigation:**
+7. **Define Routes and Navigation:**
    - Use React Router components to set up routes and navigation:
      - Wrap the content with `Router` component to enable routing.
      - Use `Link` components to create navigation links.
      - Define routes using `Routes` and `Route` components, specifying the path and the corresponding component to render.
 
-7. **Run Your App:**
-   - Start the development server:
+8. **Run Your App:**
+   - Start the Vite development server:
      ```bash
      npm run dev
      ```
-   - Open your web browser and navigate to `http://localhost:3000` to view your React app with navigation.
+   - Open your web browser and navigate to `http://localhost:5173` to view your React app with navigation.
 
 ### App Logic Overview:
 
@@ -63,4 +64,4 @@
 - **Routes:** React Router manages the routing by mapping specific URLs to corresponding components.
 - **Components:** Each component (`Home`, `About`, `Users`) represents a different page of the application and contains the respective content to be rendered.
 
-This setup allows for seamless navigation between different pages of the React application using React Router. You can further enhance the app by adding more pages, implementing nested routes, or incorporating additional features as needed.
+This setup allows for seamless navigation between different pages of the React application using React Router with Vite. You can further enhance the app by adding more pages, implementing nested routes, or incorporating additional features as needed.

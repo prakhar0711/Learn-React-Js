@@ -1,4 +1,4 @@
-```markdown
+
 # Weather App
 
 This is a simple weather app built with React that displays weather information based on the user's input city.

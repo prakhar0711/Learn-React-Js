@@ -18,6 +18,7 @@ This repository provides a **structured learning path** through a collection of 
 | **09_tictactoe** | Creates a tic-tac-toe game to test your understanding. | Advanced |
 | **10_reactRouter** | Introduces React Router for managing navigation in your app. | Intermediate |
 | **11_weatherApp** | Fetches weather data from OpenWeatherMap API to build a weather app. | Advanced |
+| **12_useContext** | Explores the concept of props drilling and useContext. | Advanced |
 
 **Additional Resources:**
 

@@ -19,6 +19,7 @@ This repository provides a **structured learning path** through a collection of 
 | **10_reactRouter** | Introduces React Router for managing navigation in your app. | Intermediate |
 | **11_weatherApp** | Fetches weather data from OpenWeatherMap API to build a weather app. | Advanced |
 | **12_useContext** | Explores the concept of props drilling and useContext. | Advanced |
+| **13_currencyConverter** | Explores the concept of custom Hooks with a simple currency converter app. | Advanced |
 
 **Additional Resources:**
 
